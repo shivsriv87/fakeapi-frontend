@@ -12,7 +12,7 @@ const ProductList = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get(`http://localhost:5000/api/products/category/${category}`);
+      const response = await axios.get(`https://backend-fakeapi.onrender.com/api/products/category/${category}`);
       setProducts(response.data.data);
     } catch (err) {
       setError('Failed to fetch products');
